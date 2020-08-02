@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const getServerInfo = require("./lib/serverinfo");
+const searchServer = require("./lib/searchservers");
 
 app.use(bodyParser.json());
 
@@ -19,7 +20,18 @@ app.get("/server/:id", async (req, res) => {
     res.send(response);
   } catch (err) {
     console.error(err);
-    res.sendStatus(400);
+    res.sendStatus(500);
+  }
+});
+
+app.get("/search/:id", async (req, res) => {
+  let id = req.params.id;
+  try {
+    let response = await searchServer(id);
+    res.send(response);
+  } catch (err) {
+    console.error(err);
+    res.sendStatus(500);
   }
 });
 
