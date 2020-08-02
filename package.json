@@ -1,0 +1,30 @@
+{
+  "name": "gametracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    ""
+  ],
+  "author": {
+    "name": "GrayHat",
+    "email": "grayhathacks10@gmail.com",
+    "url": "https://gray-hat.me/"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsdom": "^16.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "supports-color": "^7.1.0"
+  }
+}
